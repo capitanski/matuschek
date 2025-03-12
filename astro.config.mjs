@@ -5,6 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://capitanski.github.io/',
     outDir: './docs',
-    output: 'static',
-    base: 'matuschek'
+    output: 'static'
 });
