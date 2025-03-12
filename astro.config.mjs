@@ -5,5 +5,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://capitanski.github.io/',
     outDir: './docs',
-    output: 'static'
+    output: 'static',
+    build: {
+        assets: 'custom-folder'
+    }
 });
