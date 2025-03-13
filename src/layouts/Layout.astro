@@ -39,7 +39,7 @@ import Login from "../components/Login.astro";
           opacity: 1,
           duration: 0.1,
           scrollTrigger: {
-            trigger: item,
+            trigger: item.parentElement,
             start: "top 115%",
             end: "top 80%",
             // Startet, wenn das Element 80% vom Viewport erreicht
