@@ -106,7 +106,7 @@ const links = [
         height: auto;
         display: none;
         z-index: 3;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.2s cubic-bezier(0.405, 0.935, 0.625, 0.895);
         transform: rotate(0);
         @media screen and (max-width: 767px) {
             display: block;
@@ -174,18 +174,20 @@ const links = [
         justify-content: center;
         align-items: center;
         gap: 20px;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.3s cubic-bezier(0.405, 0.935, 0.625, 0.895);
         transform: translateY(0);
         position: absolute;
         top: 0;
         z-index: 1;
         height: 100vh;
         background: white;
+        opacity: 1;
         @media screen and (max-width: 767px) {
             display: flex;
         }
     }
     .hidden {
         transform: translateY(-100vh);
+        opacity: 0;
     }
 </style>
