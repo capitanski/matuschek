@@ -31,14 +31,15 @@ import Login from "../components/Login.astro";
         {
           y: 0,
           opacity: 1,
-          duration: 0.3,
+          duration: 0.1,
           scrollTrigger: {
             trigger: item,
-            start: "top 95%",
-            end: "top 60%",
+            start: "top 115%",
+            end: "top 80%",
             // Startet, wenn das Element 80% vom Viewport erreicht
-            toggleActions: "play reverse play reverse",
-            scrub: 1,
+            toggleActions: "play none none none",
+            scrub: 3,
+            force3D: true,
           },
         },
       );
