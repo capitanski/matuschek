@@ -7,9 +7,21 @@ import Scribble from "../assets/Scribble.svg";
 ---
 
 <section>
-  <img src={Scribble.src} alt="" class="scribble" />
+  <img
+    src={Scribble.src}
+    alt=""
+    class="scribble"
+    fetchpriority="high"
+    loading="eager"
+  />
   <div class="container">
-    <img src={Circles.src} alt="" class="circles-svg" />
+    <img
+      src={Circles.src}
+      alt=""
+      class="circles-svg"
+      fetchpriority="high"
+      loading="eager"
+    />
     <div class="hero-container">
       <h1>Elegante Saxophonmusik für Hochzeiten, Events und mehr.</h1>
       <p>
