@@ -23,23 +23,77 @@ import Scribble from "../assets/Scribble.svg";
       loading="eager"
     />
     <div class="hero-container">
-      <h1>Elegante Saxophonmusik für Hochzeiten, Events und mehr.</h1>
-      <p>
+      <h1 class="hero-heading">
+        Elegante Saxophonmusik für Hochzeiten, Events und mehr.
+      </h1>
+      <p class="hero-paragraph">
         Jakob Matuschek wurde 1995 in Passau geboren und startete dort seine
         musikalische Ausbildung an der städtischen Musikschule in den Fächern
         Klavier, Saxophon und Schlagwerk. Sein Studium an der Berufsfachschule
         für Musik in Plattling schloss er im Jahr 2016 als staatlich geprüfter
         Ensembleleiter mit Hauptfach Saxophon ab.
       </p>
-      <div class="button-wrapper">
-        <Button linkText="Jetzt anfragen" target="#kontakt" />
-        <Button linkText="Referenzen" target="#rezensionen" />
+      <div class="button-wrapper hero-button-wrapper">
+        <Button
+          linkText="Jetzt anfragen"
+          target="#kontakt"
+          class="hero-button-1"
+        />
+        <Button
+          linkText="Referenzen"
+          target="#rezensionen"
+          class="hero-button-2"
+        />
       </div>
     </div>
-    <img src={background.src} alt="" />
+    <img
+      src={background.src}
+      alt=""
+      fetchpriority="high"
+      loading="eager"
+      class="hero-image"
+    />
   </div>
 </section>
-
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  window.addEventListener("DOMContentLoaded", () => {
+    const heroTimeline = gsap.timeline({
+      repeat: 0,
+      defaults: { ease: "expo.inOut" },
+    });
+    heroTimeline.fromTo(
+      ".hero-image",
+      { opacity: 0.5, y: -2 },
+      { opacity: 1, y: 0, duration: 0.4 },
+    );
+    heroTimeline.fromTo(
+      ".hero-heading",
+      { opacity: 0, y: -2 },
+      { opacity: 1, y: 0, duration: 0.4 },
+      "-=0.2",
+    );
+    heroTimeline.fromTo(
+      ".hero-paragraph",
+      { opacity: 0, y: -2 },
+      { opacity: 1, y: 0, duration: 0.4 },
+      "-=0.2",
+    );
+    heroTimeline.fromTo(
+      ".hero-button-1",
+      { opacity: 0, y: -2 },
+      { opacity: 1, y: 0, duration: 0.4 },
+      "-=0.2",
+    );
+    heroTimeline.fromTo(
+      ".hero-button-2",
+      { opacity: 0, y: -2 },
+      { opacity: 1, y: 0, duration: 0.4 },
+      "-=0.2",
+    );
+  });
+</script>
 <style>
   section {
     display: flex;

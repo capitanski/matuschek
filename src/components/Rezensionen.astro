@@ -36,16 +36,16 @@ const rezensionen = [
 
 <section id="rezensionen">
   <div class="container">
-    <img src={Circles.src} alt="" class="scribble" />
-    <h2>Kundenstimmen</h2>
+    <img src={Circles.src} alt="" class="scribble animatable-opacity" />
+    <h2 class="animatable">Kundenstimmen</h2>
     <div class="rezensionen-grid">
       {
         rezensionen.map((rezension) => {
           return (
             <div class="rezension-card">
-              <p class="card-title">{rezension.title}</p>
-              <p class="card-text">{rezension.text}</p>
-              <div class="card-author-and-date">
+              <p class="card-title animatable">{rezension.title}</p>
+              <p class="card-text animatable">{rezension.text}</p>
+              <div class="card-author-and-date animatable">
                 <p class="card-author">{rezension.author},</p>
                 <p class="card-date">{rezension.date}</p>
               </div>

@@ -19,7 +19,51 @@ import Login from "../components/Login.astro";
     <slot />
   </body>
 </html>
-<script></script>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  window.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".animatable").forEach((item) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 25 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+          scrollTrigger: {
+            trigger: item,
+            start: "top 95%",
+            end: "top 60%",
+            // Startet, wenn das Element 80% vom Viewport erreicht
+            toggleActions: "play reverse play reverse",
+            scrub: 1,
+          },
+        },
+      );
+    });
+    gsap.utils.toArray(".animatable-opacity").forEach((item) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 25 },
+        {
+          y: 0,
+          opacity: 0.3,
+          duration: 0.3,
+          scrollTrigger: {
+            trigger: item,
+            start: "top 95%",
+            end: "top 60%",
+            // Startet, wenn das Element 80% vom Viewport erreicht
+            toggleActions: "play reverse play reverse",
+            scrub: 1,
+          },
+        },
+      );
+    });
+  });
+</script>
 <style>
   :root {
     font-family: "Inter", sans-serif;
