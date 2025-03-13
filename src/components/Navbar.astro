@@ -36,7 +36,11 @@ const links = [
   <div class="mobile-links hidden" id="mobile-links">
     {
       links.map((link) => {
-        return <a href={link.to}>{link.text}</a>;
+        return (
+          <a href={link.to} class="mobile-link">
+            {link.text}
+          </a>
+        );
       })
     }
   </div>
@@ -45,6 +49,13 @@ const links = [
   document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.getElementById("navbar");
     const body = document.getElementById("body");
+    const mobileLinks = document.getElementById("mobile-links");
+    const links = Array.from(document.getElementsByClassName("mobile-link"));
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        mobileLinks?.classList.add("hidden");
+      });
+    });
     function handleScroll() {
       console.log("scrolling");
       const scrollTop =
@@ -58,7 +69,6 @@ const links = [
 
     body?.addEventListener("scroll", handleScroll);
   });
-
   const burger = document.getElementById("menu");
   const mobileLinks = document.getElementById("mobile-links");
   burger?.addEventListener("click", (event) => {
