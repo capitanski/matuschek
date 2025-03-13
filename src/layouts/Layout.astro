@@ -12,6 +12,10 @@ import Login from "../components/Login.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Jakob Matuschek - Saxophonmusik aus dem Herzen Passau's</title>
+    <meta
+      name="description"
+      content="Jakob Matuschek - Saxophonmusik aus dem Herzen Passau's"
+    />
   </head>
   <body id="body">
     <Login />
@@ -20,9 +24,6 @@ import Login from "../components/Login.astro";
   </body>
 </html>
 <script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  document.addEventListener("touchstart", () => {}, { passive: true });
   window.addEventListener("DOMContentLoaded", () => {
     // CUSTOM INTERSECTION OBSERVER
     // Alle zu beobachtenden Elemente auswählen
