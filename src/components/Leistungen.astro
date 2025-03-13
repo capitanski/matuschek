@@ -34,7 +34,12 @@ const leistungen = [
           return (
             <div class="rezension-card">
               <div class="icon-and-title">
-                <img src={leistung.icon} alt="" class="card-icon" />
+                <img
+                  src={leistung.icon}
+                  alt=""
+                  class="card-icon"
+                  loading="lazy"
+                />
                 <p class="card-title">{leistung.title}</p>
               </div>
               <p class="card-text">{leistung.text}</p>
