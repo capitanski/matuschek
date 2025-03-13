@@ -21,7 +21,7 @@
 
 .in-view-opacity {
   transform: translateY(0) !important;
-  opacity: 0.3 !important;
+  opacity: 0.5 !important;
 }
 
 .animatable {
