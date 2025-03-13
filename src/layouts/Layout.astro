@@ -24,52 +24,38 @@ import Login from "../components/Login.astro";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   document.addEventListener("touchstart", () => {}, { passive: true });
   window.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.defaults({
-      scroller: window,
-      markers: false,
-      fastScrollEnd: true,
-    });
-    gsap.utils.toArray(".animatable").forEach((item) => {
-      gsap.fromTo(
-        item,
-        { opacity: 0, y: 25 },
-        {
-          lazy: false,
-          y: 0,
-          opacity: 1,
-          duration: 0.1,
-          scrollTrigger: {
-            trigger: item.parentElement,
-            start: "top 115%",
-            end: "top 80%",
-            // Startet, wenn das Element 80% vom Viewport erreicht
-            toggleActions: "play none none none",
-            scrub: 3,
-            force3D: true,
-          },
-        },
-      );
-    });
-    gsap.utils.toArray(".animatable-opacity").forEach((item) => {
-      gsap.fromTo(
-        item,
-        { opacity: 0, y: 25 },
-        {
-          y: 0,
-          opacity: 0.3,
-          duration: 0.3,
-          scrollTrigger: {
-            trigger: item,
-            start: "top 95%",
-            end: "top 60%",
-            // Startet, wenn das Element 80% vom Viewport erreicht
-            toggleActions: "play reverse play reverse",
-            scrub: 0.5,
-          },
-        },
-      );
-    });
+    // CUSTOM INTERSECTION OBSERVER
+    // Alle zu beobachtenden Elemente auswählen
+    const elements = document.querySelectorAll(".animatable");
+    const images = document.querySelectorAll(".animatable-opacity");
+    // Intersection Observer erstellen
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view"); // Klasse hinzufügen
+          } else {
+            entry.target.classList.remove("in-view"); // Klasse entfernen
+          }
+        });
+      },
+      { threshold: 0.3 },
+    ); // Aktiviert, wenn 30% sichtbar
+    const secondObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view-opacity"); // Klasse hinzufügen
+          } else {
+            entry.target.classList.remove("in-view-opacity"); // Klasse entfernen
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+    // Jedes Element dem Observer hinzufügen
+    elements.forEach((el) => observer.observe(el));
+    images.forEach((el) => secondObserver.observe(el));
   });
 </script>
 <style>

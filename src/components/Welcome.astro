@@ -23,7 +23,7 @@ import Scribble from "../assets/Scribble.svg";
       loading="eager"
     />
     <div class="hero-container">
-      <h1 class="hero-heading">
+      <h1 class="hero-heading animatable">
         Elegante Saxophonmusik für Hochzeiten, Events und mehr.
       </h1>
       <p class="hero-paragraph">
@@ -51,49 +51,11 @@ import Scribble from "../assets/Scribble.svg";
       alt=""
       fetchpriority="high"
       loading="eager"
-      class="hero-image"
+      class="hero-image animatable"
     />
   </div>
 </section>
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  window.addEventListener("DOMContentLoaded", () => {
-    const heroTimeline = gsap.timeline({
-      repeat: 0,
-      defaults: { ease: "expo.inOut" },
-    });
-    heroTimeline.fromTo(
-      ".hero-image",
-      { opacity: 0.5, y: -2 },
-      { opacity: 1, y: 0, duration: 0.4 },
-    );
-    heroTimeline.fromTo(
-      ".hero-heading",
-      { opacity: 0, y: -2 },
-      { opacity: 1, y: 0, duration: 0.4 },
-      "-=0.2",
-    );
-    heroTimeline.fromTo(
-      ".hero-paragraph",
-      { opacity: 0, y: -2 },
-      { opacity: 1, y: 0, duration: 0.4 },
-      "-=0.2",
-    );
-    heroTimeline.fromTo(
-      ".hero-button-1",
-      { opacity: 0, y: -2 },
-      { opacity: 1, y: 0, duration: 0.4 },
-      "-=0.2",
-    );
-    heroTimeline.fromTo(
-      ".hero-button-2",
-      { opacity: 0, y: -2 },
-      { opacity: 1, y: 0, duration: 0.4 },
-      "-=0.2",
-    );
-  });
-</script>
+<script></script>
 <style>
   section {
     display: flex;
