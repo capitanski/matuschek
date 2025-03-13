@@ -22,8 +22,14 @@ import Login from "../components/Login.astro";
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+  document.addEventListener("touchstart", () => {}, { passive: true });
   window.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.defaults({
+      scroller: window,
+      markers: false,
+      fastScrollEnd: true,
+    });
     gsap.utils.toArray(".animatable").forEach((item) => {
       gsap.fromTo(
         item,

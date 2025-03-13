@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+.animatable {
+  will-change: transform, opacity;
+}
+
 .button-wrapper {
   width: 100%;
   display: grid;
@@ -52,5 +56,4 @@ p {
   font-size: 0.9rem;
 }
 
-section {
-}
+section {}
