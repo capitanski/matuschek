@@ -2,7 +2,7 @@
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/Hero.png";
 import Button from "../components/Button.astro";
-import Circles from "../assets/Circles.svg";
+import Circles from "../assets/jakob_matuschek.svg";
 import Scribble from "../assets/Scribble.svg";
 ---
 
@@ -17,7 +17,7 @@ import Scribble from "../assets/Scribble.svg";
   <img
     src={Circles.src}
     alt=""
-    class="circles-svg"
+    class="circles-svg animatable-opacity"
     fetchpriority="high"
     loading="eager"
   />
@@ -107,7 +107,7 @@ import Scribble from "../assets/Scribble.svg";
     color: var(--darkgray);
     max-width: 600px;
     line-height: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 0.9rem;
   }
   .hero-container {
@@ -143,12 +143,13 @@ import Scribble from "../assets/Scribble.svg";
   .circles-svg {
     position: absolute;
     z-index: 0;
-    width: 100%;
+    width: 90%;
     object-fit: contain;
     object-position: left;
-    top: 0;
-    filter: blur(100px);
+    top: 150px;
+    filter: blur(0px);
     opacity: 0;
+    border-radius: 0 !important;
   }
   .hero-image {
     border-radius: 0;
