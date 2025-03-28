@@ -40,7 +40,7 @@ import Login from "../components/Login.astro";
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.3 }
     ); // Aktiviert, wenn 30% sichtbar
     const secondObserver = new IntersectionObserver(
       (entries) => {
@@ -52,7 +52,7 @@ import Login from "../components/Login.astro";
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.3 }
     );
     // Jedes Element dem Observer hinzufügen
     elements.forEach((el) => observer.observe(el));
@@ -71,5 +71,6 @@ import Login from "../components/Login.astro";
     height: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background: var(--desertCream);
   }
 </style>
