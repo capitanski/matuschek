@@ -15,7 +15,7 @@
   --champagne: #f1e9db;
   box-sizing: border-box;
 }
-
+/* The Seasons als Headline Schrift */
 * {
   box-sizing: border-box;
 }
@@ -53,11 +53,11 @@
 .button-wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-
+  margin-top: 20px;
   @media screen and (max-width: 820px) {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 }
