@@ -1,10 +1,12 @@
 ---
 import Button from "../components/Button.astro";
 import Image from "../assets/Heine.svg";
-import BiographyImage from "../assets/Biographie.webp";
+import BiographyImage from "../assets/Biographie_png.png";
+import Passau from "../assets/Passau.svg";
 ---
 
 <section id="biographie">
+  <img src={Passau.src} class="img-absolute animatable-opacity" alt="" />
   <div class="container">
     <div class="inner-container">
       <img src={BiographyImage.src} alt="" loading="lazy" class="animatable" />
@@ -41,6 +43,9 @@ import BiographyImage from "../assets/Biographie.webp";
 </section>
 
 <style>
+  section {
+    position: relative;
+  }
   h2 {
     font-family: "the-seasons", sans-serif;
     font-weight: 700;
@@ -74,8 +79,20 @@ import BiographyImage from "../assets/Biographie.webp";
     margin: 0 auto;
     border-radius: 50px;
     @media screen and (max-width: 820px) {
-      width: 70%;
+      width: 90%;
       margin-top: 50px;
+    }
+  }
+  .img-absolute {
+    border-radius: 0;
+    position: absolute;
+    left: 5%;
+    top: 400px;
+    width: 50%;
+    @media screen and (max-width: 820px) {
+      width: 60vw;
+      top: -20px;
+      left: 20vw;
     }
   }
   .left-aligned {
