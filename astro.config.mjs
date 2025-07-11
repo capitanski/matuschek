@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 // Make sure to uncomment the base when publishing to GITHUB PAGES
 // https://astro.build/config
 export default defineConfig({
@@ -13,4 +14,5 @@ export default defineConfig({
   build: {
     assets: "custom-folder",
   },
+  integrations: [sitemap()],
 });
