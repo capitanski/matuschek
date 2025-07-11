@@ -1,6 +1,7 @@
 ---
 import Image from "../assets/Contact.webp";
 import Swirl from "../assets/Scribble.svg";
+import { Phone, AtSign } from "@lucide/astro";
 ---
 
 <section id="kontakt">
@@ -11,8 +12,8 @@ import Swirl from "../assets/Scribble.svg";
       <p class="subtitle">
         Egal ob per Telefon oder Email - ich freue mich von Ihnen zu hören.
       </p>
-      <span> +49 123456789</span>
-      <span> jakob@matuschek.de</span>
+      <span><Phone class="icon" /> <p>+49 123456789</p></span>
+      <span><AtSign class="icon" /> <p>jakob@matuschek.de</p></span>
       <div class="legal-links">
         <a href="#">Impressum</a>
         <a href="#">Datenschutz</a>
@@ -63,11 +64,21 @@ import Swirl from "../assets/Scribble.svg";
   }
   h2 {
     align-self: flex-start;
-    margin-bottom: 0px;
     color: var(--darkgray);
-    font-family: "the-seasons", sans-serif;
     font-weight: 700;
+    font-size: 4.2rem;
+    text-shadow: 0px 0px 3px rgba(228, 228, 228, 0.6);
+    letter-spacing: -3px;
+    line-height: 4.2rem;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: "Garamond", sans-serif;
+    font-weight: 300;
     font-style: normal;
+    @media screen and (max-width: 820px) {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
   }
   .contact-image {
     width: 40%;
@@ -87,15 +98,23 @@ import Swirl from "../assets/Scribble.svg";
     }
   }
   span {
-    display: block;
-    border-left: 5px solid;
-    border-image: url("/images/gold-texture.jpg") 30 round;
-    padding: 15px 0 15px 15px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 5px;
     color: var(--darkgray);
     @media screen and (max-width: 820px) {
       font-size: 1rem;
     }
+  }
+  span p {
+    font-weight: 500;
+  }
+  .icon {
+    flex-shrink: 0;
   }
   a {
     color: var(--darkgray);
@@ -119,12 +138,11 @@ import Swirl from "../assets/Scribble.svg";
   .contact-swirl {
     position: absolute;
     z-index: -1;
-    left: -400px;
+    left: -800px;
     width: 100%;
-    transform: rotate(180deg);
     @media screen and (max-width: 820px) {
       left: 0;
-      top: 20%;
+      top: -250px;
     }
   }
 </style>

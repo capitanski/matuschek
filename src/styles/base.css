@@ -25,7 +25,16 @@
   src: url("/fonts/Inter.ttf");
   font-display: swap;
 }
-
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/Cormorant.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garamond";
+  src: url("/fonts/Garamond.ttf");
+  font-display: swap;
+}
 .in-view {
   transform: translateY(0) !important;
   opacity: 1 !important;
