@@ -1,32 +1,15 @@
 ---
 import Logo from "../assets/Logo.svg";
 import Menu from "../assets/Menu.svg";
-const links = [
-  {
-    text: "Biographie",
-    to: "#biographie",
-  },
-  {
-    text: "Leistungen",
-    to: "#leistungen",
-  },
-  {
-    text: "Rezensionen",
-    to: "#rezensionen",
-  },
-  {
-    text: "Kontakt",
-    to: "#kontakt",
-  },
-];
+const { links } = Astro.props;
 ---
 
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="/" aria-label="Zurück zum Start">
+    <a href="/" aria-label="Zurück zum Start" class="logo-link">
       <img
         src={Logo.src}
-        alt=""
+        alt="Jakob Matuschek | Saxophonist aus Passau"
         class="logo"
         fetchpriority="high"
         loading="eager"
@@ -112,6 +95,12 @@ const links = [
     @media screen and (max-width: 767px) {
       display: block;
     }
+  }
+  .logo-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
   .turned {
     transform: rotate(180deg);

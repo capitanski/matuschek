@@ -1,0 +1,116 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const links = [
+  {
+    text: "Biographie",
+    to: "/#biographie",
+  },
+  {
+    text: "Leistungen",
+    to: "/#leistungen",
+  },
+  {
+    text: "Rezensionen",
+    to: "/#rezensionen",
+  },
+  {
+    text: "Kontakt",
+    to: "/#kontakt",
+  },
+];
+const title = "Datenschutz | Jakob Matuschek – Saxophonist Passau";
+const description =
+  "Datenschutzerklärung von Jakob Matuschek, Saxophonist aus Passau. Alle Informationen zur Verarbeitung personenbezogener Daten beim Besuch dieser Website.";
+---
+
+<Layout links={links} title={title} description={description}>
+  <section>
+    <div class="container">
+      <h1>Datenschutzerklärung</h1>
+
+      <p>
+        Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und
+        Zweck der Verarbeitung von personenbezogenen Daten beim Besuch dieser
+        Website.
+      </p>
+
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        [Name des Musikers]<br />
+         [Straße, Hausnummer]<br />
+         [PLZ Ort]<br />
+         [Land, falls außerhalb DE]<br />
+        <br />
+         E-Mail: [E-Mail-Adresse]
+      </p>
+
+      <h2>2. Zugriffsdaten</h2>
+      <p>
+        Beim Aufrufen dieser Website werden durch den Webserver automatisch
+        Informationen erfasst. Diese Informationen (sog. Server-Logfiles)
+        beinhalten z.B. Browsertyp und Browserversion, verwendetes
+        Betriebssystem, Referrer URL, IP-Adresse und Uhrzeit der Serveranfrage.
+      </p>
+      <p>
+        Die Verarbeitung erfolgt zur Gewährleistung eines reibungslosen
+        Verbindungsaufbaus und Systemsicherheit. Diese Daten werden nicht mit
+        anderen Datenquellen zusammengeführt.
+      </p>
+
+      <h2>3. Cookies und Tracking</h2>
+      <p>
+        Auf dieser Website werden keine Cookies gesetzt und keine Tracking- oder
+        Analyse-Tools eingesetzt.
+      </p>
+
+      <h2>4. Verwendung von Schriften (Google Fonts)</h2>
+      <p>
+        Zur einheitlichen Darstellung werden Google Fonts verwendet, die lokal
+        auf dem Server eingebunden sind. Es erfolgt keine Verbindung zu Servern
+        von Google und somit keine Datenübertragung an Dritte.
+      </p>
+
+      <h2>5. Kontaktaufnahme</h2>
+      <p>
+        Auf dieser Website existiert kein Kontaktformular. Für Kontaktanfragen
+        nutzen Sie bitte die oben angegebene E-Mail-Adresse.
+      </p>
+
+      <h2>6. Ihre Rechte</h2>
+      <p>
+        Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten
+        personenbezogenen Daten sowie deren Berichtigung, Sperrung oder
+        Löschung. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene
+        Daten können Sie sich jederzeit unter der im Impressum angegebenen
+        Adresse an uns wenden.
+      </p>
+
+      <h2>7. Änderungen dieser Datenschutzerklärung</h2>
+      <p>
+        Diese Datenschutzerklärung wird bei Bedarf angepasst, um den rechtlichen
+        Anforderungen zu entsprechen. Die jeweils aktuelle Version finden Sie
+        auf dieser Seite.
+      </p>
+
+      <p>Stand: Juli 2025</p>
+    </div>
+  </section>
+</Layout>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 90px;
+    @media (max-width: 820px) {
+      padding: 50px 10px;
+    }
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+</style>

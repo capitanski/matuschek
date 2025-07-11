@@ -2,6 +2,7 @@
 import "../styles/base.css";
 import Navbar from "../components/Navbar.astro";
 import Login from "../components/Login.astro";
+const { links, title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,15 +12,13 @@ import Login from "../components/Login.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Jakob Matuschek - Saxophonmusik aus dem Herzen Passau's</title>
-    <meta
-      name="description"
-      content="Jakob Matuschek - Saxophonmusik aus dem Herzen Passau's"
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body id="body">
     <Login />
-    <Navbar />
+    <Navbar links={links} />
     <slot />
   </body>
 </html>

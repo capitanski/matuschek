@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const links = [
+  {
+    text: "Biographie",
+    to: "/#biographie",
+  },
+  {
+    text: "Leistungen",
+    to: "/#leistungen",
+  },
+  {
+    text: "Rezensionen",
+    to: "/#rezensionen",
+  },
+  {
+    text: "Kontakt",
+    to: "/#kontakt",
+  },
+];
+const title = "Impressum | Jakob Matuschek – Saxophonist Passau";
+const description =
+  "Impressum von Jakob Matuschek, Saxophonist aus Passau. Alle rechtlichen Angaben gemäß § 5 TMG im Überblick.";
+---
+
+<Layout links={links} title={title} description={description}>
+  <section>
+    <div class="container">
+      <h1>Impressum</h1>
+
+      <h2>Angaben gemäß § 5 TMG</h2>
+      <p>
+        [Vor- und Nachname des Musikers]<br />
+         [Straße, Hausnummer]<br />
+         [PLZ Ort]<br />
+         [Land, falls außerhalb DE]
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>
+        Telefon: [Telefonnummer, falls vorhanden]<br />
+         E-Mail: [E-Mail-Adresse]
+      </p>
+
+      <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+      <p>
+        [Vor- und Nachname des Musikers]<br />
+         [Straße, Hausnummer]<br />
+         [PLZ Ort]<br />
+         [Land]
+      </p>
+
+      <h2>Haftungsausschluss</h2>
+      <p>
+        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung
+        für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten
+        sind ausschließlich deren Betreiber verantwortlich.
+      </p>
+
+      <h2>Urheberrecht</h2>
+      <p>
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser
+        Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind
+        als solche gekennzeichnet oder unterliegen dem Creative Commons CC0. Die
+        Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
+        außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
+        Zustimmung des jeweiligen Autors bzw. Erstellers.
+      </p>
+
+      <p>Stand: Juli 2025</p>
+    </div>
+  </section>
+</Layout>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 90px;
+    @media (max-width: 820px) {
+      padding: 50px 10px;
+    }
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+</style>

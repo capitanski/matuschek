@@ -10,18 +10,21 @@ import { Phone, AtSign } from "@lucide/astro";
     <div class="contact-info">
       <h2>Kontakt</h2>
       <p class="subtitle">
-        Egal ob per Telefon oder Email - ich freue mich von Ihnen zu hören.
+        Haben Sie Fragen oder möchten Sie mich für Ihre Hochzeit, Ihr
+        Firmenevent oder Ihre Feier buchen? Schreiben Sie mir gerne – ich freue
+        mich darauf, von Ihnen zu hören und Ihre Veranstaltung musikalisch zu
+        etwas ganz Besonderem zu machen.
       </p>
       <span><Phone class="icon" /> <p>+49 123456789</p></span>
       <span><AtSign class="icon" /> <p>jakob@matuschek.de</p></span>
       <div class="legal-links">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+        <a href="/legal/impressum">Impressum</a>
+        <a href="/legal/datenschutz">Datenschutz</a>
       </div>
     </div>
     <img
       src={Image.src}
-      alt=""
+      alt="Jakob Matuschek | Saxophonist aus Passau"
       class="contact-image animatable"
       loading="lazy"
     />
@@ -131,7 +134,7 @@ import { Phone, AtSign } from "@lucide/astro";
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
-    border-top: 1px solid var(--lightgray);
+    border-top: 1px solid var(--darkgray);
     padding-top: 20px;
     margin-top: 20px;
   }

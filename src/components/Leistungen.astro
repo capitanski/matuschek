@@ -7,17 +7,17 @@ const leistungen = [
   {
     icon: Hochzeiten.src,
     title: "Hochzeiten",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    text: "Ihre Hochzeit ist ein einzigartiger Tag voller Emotionen. Ich begleite Sie mit gefühlvollen Saxophonklängen während der Trauung, dem Sektempfang oder Dinner und schaffe eine besondere Atmosphäre, die Sie und Ihre Gäste nie vergessen werden. Musik, die berührt und Herzen verbindet.",
   },
   {
     icon: Corporate.src,
     title: "Firmenevents",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    text: "Ob elegante Gala, Messe oder Betriebsfeier – mit meinem Saxophon verleihe ich Ihrem Firmenevent eine stilvolle musikalische Note. Dezente Hintergrundmusik oder energiegeladene Live-Performance: Ich passe mich Ihrer Veranstaltung an und sorge dafür, dass Ihre Gäste sich rundum wohlfühlen.",
   },
   {
     icon: Birthday.src,
     title: "Geburtstage",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    text: "Feiern Sie Ihren Geburtstag mit Live-Musik, die Herzen berührt. Mit meinem Saxophon sorge ich für eine entspannte Atmosphäre beim Sektempfang oder für schwungvolle Momente auf Ihrer Feier. Lassen Sie sich und Ihre Gäste von warmen Saxophonklängen begeistern und schaffen Sie Erinnerungen, die bleiben.",
   },
 ];
 ---
@@ -26,7 +26,10 @@ const leistungen = [
   <div class="container">
     <h2 class="animatable">Leistungen</h2>
     <p class="subtitle animatable">
-      Von Hochzeiten über Firmenevents, bis zu Geburtstagen und vielem mehr.
+      Ob Hochzeit, Firmenevent oder Geburtstag – jede Veranstaltung verdient die
+      passende musikalische Begleitung. Mit meinem Saxophon sorge ich dafür,
+      dass Ihre Feier unvergesslich wird und genau die Atmosphäre entsteht, die
+      Sie sich wünschen.
     </p>
     <div class="rezensionen-grid">
       {
@@ -71,6 +74,10 @@ const leistungen = [
     text-align: left;
     margin: 0;
     font-weight: 600;
+    max-width: 50%;
+    @media (max-width: 820px) {
+      max-width: 100%;
+    }
   }
   .scribble {
     position: absolute;
