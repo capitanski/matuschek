@@ -7,12 +7,12 @@ export default defineConfig({
   site: "https://capitanski.github.io/",
   outDir: "./docs",
   output: "static",
-  base: "matuschek",
+  //base: "matuschek",
   server: {
     host: true,
   },
-  build: {
+  /*build: {
     assets: "custom-folder",
-  },
+  },*/
   integrations: [sitemap()],
 });
