@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 // Make sure to uncomment the base when publishing to GITHUB PAGES
 // https://astro.build/config
 export default defineConfig({
-  site: "https://capitanski.github.io/",
+  site: "https://jakobmatuschek.de",
   //outDir: "./docs",
   output: "static",
   //base: "matuschek",

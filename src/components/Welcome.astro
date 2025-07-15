@@ -30,8 +30,8 @@ import Scribble from "../assets/Scribble.svg";
       fetchpriority="high"
       loading="eager"
       class="hero-image"
-      width="200"
-      height="200"
+      width="600"
+      height="600"
     />
     <div class="hero-container">
       <h1 class="hero-heading">
@@ -120,9 +120,12 @@ import Scribble from "../assets/Scribble.svg";
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
+    width: 50%;
     gap: 5px;
     z-index: 1;
+    @media screen and (max-width: 820px) {
+      width: 100%;
+    }
   }
 
   img {
