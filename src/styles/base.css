@@ -76,7 +76,10 @@
   max-width: 1200px;
   box-sizing: border-box;
 }
-
+h1,
+h2 {
+  color: #3b3b3b !important;
+}
 h2 {
   font-weight: 700;
   font-size: 3rem;
