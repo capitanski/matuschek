@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Kontakt from "../components/Kontakt.astro";
+const links = [
+  {
+    text: "Biographie",
+    to: "/#biographie",
+  },
+  {
+    text: "Leistungen",
+    to: "/#leistungen",
+  },
+  /*{
+    text: "Rezensionen",
+    to: "#rezensionen",
+  },*/
+  {
+    text: "Kontakt",
+    to: "/#kontakt",
+  },
+];
+const title = "404 - Die angefragte Seite konnte leider nicht gefunden werden.";
+const description =
+  "404 - Die angefragte Seite konnte leider nicht gefunden werden.";
+---
+
+<Layout links={links} title={title} description={description}>
+  <section>
+    <div class="container">
+      <h1>404</h1>
+      <p>Die angefragte Seite konnte leider nicht gefunden werden.</p>
+    </div>
+  </section>
+  <Kontakt />
+</Layout>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 30vh;
+    padding-top: 100px;
+    @media (max-width: 820px) {
+      padding: 0 20px;
+    }
+  }
+  h1 {
+    font-size: 6rem;
+    margin: 0;
+  }
+</style>
