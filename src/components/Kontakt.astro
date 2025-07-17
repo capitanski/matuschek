@@ -1,7 +1,7 @@
 ---
 import Image from "../assets/Contact.webp";
 import Swirl from "../assets/Scribble.svg";
-import { Phone, AtSign } from "@lucide/astro";
+import { Phone, AtSign, Instagram, Facebook } from "@lucide/astro";
 ---
 
 <section id="kontakt">
@@ -18,6 +18,12 @@ import { Phone, AtSign } from "@lucide/astro";
       <span><Phone class="icon" /> <p>+49 160 5625345</p></span>
       <span><AtSign class="icon" /> <p>saxophon@jakobmatuschek.de</p></span>
       <div class="legal-links">
+        <a href="https://www.instagram.com/jakobmatuschek/" class="social"
+          ><Instagram /></a
+        >
+        <a href="https://www.facebook.com/JakobMatuschek/" class="social"
+          ><Facebook /></a
+        >
         <a href="/legal/impressum">Impressum</a>
         <a href="/legal/datenschutz">Datenschutz</a>
       </div>
@@ -139,7 +145,7 @@ import { Phone, AtSign } from "@lucide/astro";
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     border-top: 1px solid var(--darkgray);
     padding-top: 20px;
@@ -157,5 +163,14 @@ import { Phone, AtSign } from "@lucide/astro";
       left: -100px;
       top: -100px;
     }
+  }
+  .social {
+    border: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 </style>
